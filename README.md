@@ -26,7 +26,7 @@ The goal is to deploy with as few steps as possible:
 - Run `heroku create` from a terminal at the root project directory.
 - Run `heroku buildpacks:set https://github.com/ehmatthes/heroku-buildpack-python.git`. This will use the revised buildpack.
 - Run `heroku config:set AUTCONFIGURE_ALL=1`. This tells Heroku to automatically configure your project for deployment.
-- Run `git push heroku master`.
+- Run `git push heroku main`.
 
 That should be it. This will automatically create a *Procfile*, configure the Heroku database, configure static file management, and modify settings slightly to serve the project from the Heroku environment.
 
@@ -47,7 +47,7 @@ When working on the buildpack, I often need to push this project to heroku repea
 
 - `ehco "hi" >> fake_deploy.txt`
 - `git commit -am "Test deploy process."`
-- `git push heroku master`
+- `git push heroku main`
 
 Questions/ feedback?
 ---
