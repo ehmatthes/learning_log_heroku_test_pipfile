@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+asgiref = "*"
+beautifulsoup4 = "*"
+django-bootstrap4 = "*"
+pytz = "*"
+soupsieve = "*"
+sqlparse = "*"
+Django = "*"
+
+[requires]
+python_version = "3.8"
