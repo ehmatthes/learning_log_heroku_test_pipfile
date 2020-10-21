@@ -1,4 +1,4 @@
-Learning Log - Heroku test project
+Learning Log - Heroku test project (using Pipenv)
 ===
 
 Deploying a Django project to Heroku is much simpler than deploying to a VPS such as Digital Ocean or Linode. But there are still a number of configuration steps that are confusing to beginners and newcomers, and that could probably be automated.
@@ -7,13 +7,17 @@ There are some external libraries that aim to make this process easier, but lack
 
 Learning Log is a very simple Django project, but it's more than just a Hello World project. This is the Django project from *Python Crash Course*, but I'm thinking about more than just PCC readers when doing this work. The original vision of Heroku was to provide as seamless of a deployment process as possible, while not restraining developers. The goal of this revised buildpack is to automate initial configuration steps, but in a way that developers can then customize without having to undo any of the auto-configuration steps.
 
+This version is set up for testing deployments that use Pipenv. There is a [separate version](https://github.com/ehmatthes/learning_log_heroku_test) for testing deployments that use requirements.txt.
+
 Running this project locally
 ---
 
 To run this project locally:
 
 - Clone or download this repo.
-- Create a virtual environment, and install from *requirements.txt*.
+- Create a virtual environment, and install from *Pipfile*.
+  - `pip install pipenv`
+  - `pipenv install`
 - Migrate the database, which is configured to be SQLite for local development.
 - Start the development server.
 - Visit the site locally at http://localhost:8000.
